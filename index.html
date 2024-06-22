@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
 
 
-    <title>Movie Application</title>
+    <title>harry potter Application</title>
 </head>
 <body>
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Find books</a>
+          <a class="navbar-brand" href="#">Harry potter</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -48,42 +48,22 @@
         </div>
       </nav>
       <div class="container">
-        <h1 class="text-center">Book World</h1>
-        
 
-          <div id="booksContainer" class="row"></div>
+          <h2 class="text-center">Search a character:</h2>
+          <input class="form-control mr-sm-2" type="search" placeholder="Search for a character..." aria-label="Search" id="searchInput">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search">Search</button>
+   
+
+
+          <h1 class="text-center">Harry Potter Characters</h1>
+          <div id="charactersContainer" class="row"></div>
+      </div>
      
       </div>
-    <script src="index.js"></script>
+    <script type="module" src="app.js"></script>
 </body>
 </html>
- -->
+
  
 
 
- <!DOCTYPE html>
- <html lang="en">
- <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Harry Potter Characters</title>
-     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-     <style>
-         .character {
-             margin: 10px;
-             padding: 10px;
-             border: 1px solid #ddd;
-         }
-         .character img {
-             max-width: 100px;
-         }
-     </style>
- </head>
- <body>
-     <div class="container">
-         <h1 class="mt-4">Harry Potter Characters</h1>
-         <div id="charactersContainer" class="row"></div>
-     </div>
-     <script src="app.js"></script>
- </body>
- </html>

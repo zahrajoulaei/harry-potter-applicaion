@@ -1,47 +1,74 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const charactersContainer = document.getElementById('charactersContainer');
+import { fetchCharacters } from "./src/api.js";
 
-    async function fetchCharacters() {
-        try {
-            const response = await fetch('https://potterapi-fedeperin.vercel.app/en/characters');
-            const characters = await response.json();
-            displayCharacters(characters);
-            console.log(characters)
-        } catch (error) {
-            console.error('Error fetching characters:', error);
+document.addEventListener("DOMContentLoaded", () => {
+  const charactersContainer = document.getElementById("charactersContainer");
+  const searchButton = document.getElementById("search");
+  const searchInput = document.getElementById("searchInput");
+
+  searchButton.addEventListener("click", async (event) => {
+    event.preventDefault();
+    const query = searchInput.value.trim();
+    console.log("query is:", query);
+    if (query) {
+      const characters = await fetchCharacters(query);
+      displayCharacters(characters);
+      console.log(characters);
+    }
+  });
+  searchInput.addEventListener('keypress', async (event) => {
+    if(event.key === 'Enter'){
+        event.preventDefault();
+        const query = searchInput.value.trim();
+        console.log("query is:", query);
+        if (query) {
+          const characters = await fetchCharacters(query);
+          displayCharacters(characters);
+          console.log(characters);
         }
     }
 
-    function displayCharacters(characters) {
-        charactersContainer.innerHTML = '';
-        characters.forEach(character => {
-            const characterDiv = document.createElement('div');
-            characterDiv.classList.add('character', 'col-md-3');
+  });
 
-            const characterName = document.createElement('h2');
-            characterName.textContent = character.nickname;
-            characterDiv.appendChild(characterName);
 
-            const characterFullname = document.createElement('h6');
-            characterFullname.textContent = character.fullName;
-            characterDiv.appendChild(characterFullname)
+  async function initialLoad() {
+    const characters = await fetchCharacters();
+    displayCharacters(characters);
+  }
 
-            if (character.house) {
-                const characterHouse = document.createElement('p');
-                characterHouse.textContent = `House: ${character.house}`;
-                characterDiv.appendChild(characterHouse);
-            }
-
-            if (character.image) {
-                const characterImage = document.createElement('img');
-                characterImage.src = character.image;
-                characterImage.alt = `${character.name} image`;
-                characterDiv.appendChild(characterImage);
-            }
-
-            charactersContainer.appendChild(characterDiv);
-        });
+  function displayCharacters(characters) {
+    charactersContainer.innerHTML = "";
+    if (characters.length === 0) {
+      charactersContainer.innerHTML = "<p>No characters found.</p>";
+      return;
     }
+    characters.forEach((character) => {
+      const characterDiv = document.createElement("div");
+      characterDiv.classList.add("character", "col-lg-2", "card");
 
-    fetchCharacters();
+      const characterName = document.createElement("h2");
+      characterName.textContent = character.nickname || character.name;
+      characterDiv.appendChild(characterName);
+
+      const characterFullname = document.createElement("h6");
+      characterFullname.textContent = character.fullName;
+      characterDiv.appendChild(characterFullname);
+
+      if (character.house) {
+        const characterHouse = document.createElement("p");
+        characterHouse.textContent = `House: ${character.house}`;
+        characterDiv.appendChild(characterHouse);
+      }
+
+      if (character.image) {
+        const characterImage = document.createElement("img");
+        characterImage.src = character.image;
+        characterImage.alt = `${character.name} image`;
+        characterDiv.appendChild(characterImage);
+      }
+
+      charactersContainer.appendChild(characterDiv);
+    });
+  }
+
+  initialLoad();
 });
