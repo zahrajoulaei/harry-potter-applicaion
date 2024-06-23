@@ -6,3 +6,13 @@
 .character img {
     max-width: 100px;
 }
+
+.characterBoard {
+    background-color: #1F024C;
+    display: flex;
+    flex-direction: column;
+    border-radius: 18px;
+    color: white;
+    padding: 15px;
+    justify-content: center;
+}
