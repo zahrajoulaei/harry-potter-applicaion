@@ -4,7 +4,9 @@
     border: 1px solid #ddd;
 }
 .character img {
-    max-width: 100px;
+    width: 100px;
+    border-radius: 50%;
+    height: 100px;
 }
 
 .characterBoard {
@@ -15,4 +17,12 @@
     color: white;
     padding: 15px;
     justify-content: center;
+    align-items: center;
+}
+.characterBoard img {
+    max-width: 500px;
+    border-radius: 50px;
+}
+.navbar {
+    background-color: #8F1383 !important
 }

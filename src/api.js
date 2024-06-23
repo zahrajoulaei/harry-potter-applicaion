@@ -9,3 +9,17 @@ export async function fetchCharacters(query = '') {
         return[];
     }
 }
+
+export async function fetchSpells() {
+    try{ 
+        const res = await fetch('https://potterapi-fedeperin.vercel.app/en/spells')
+        const spells = await res.json()
+        console.log("spells are: ",spells)
+        return spells
+    }
+    catch (error){
+        console.error('Error fetching seplls:', error);
+        return[];
+    }
+   
+}

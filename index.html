@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
 
 
-    <title>harry potter Application</title>
+    <title>Harry Potter Application</title>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Harry potter</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,24 +40,21 @@
                 <a class="nav-link disabled" aria-disabled="true">Disabled</a>
               </li>
             </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+        
           </div>
         </div>
       </nav>
       <div class="container">
-
           <h2 class="text-center">Search a character:</h2>
           <input class="form-control mr-sm-2" type="search" placeholder="Search for a character..." aria-label="Search" id="searchInput">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search">Search</button>
-   
-
-
+          <button class="btn btn-outline-success my-2" type="submit" id="search">Search</button>
           <h1 class="text-center">Harry Potter Characters</h1>
           <div id="selectedChar"></div>
           <div id="charactersContainer" class="row"></div>
+      </div>
+      <div class="container">
+        <div id="spellContainer" class="row">
+        </div>
       </div>
      
       </div>
