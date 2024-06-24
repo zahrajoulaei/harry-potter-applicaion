@@ -1,8 +1,6 @@
-import { fetchCharacters, fetchSpells , fetchHouses} from "./src/api.js";
+import { fetchCharacters, fetchSpells } from "./src/api.js";
 import { displayCharacters } from "./src/characters.js";
 import { displaySpells } from "./src/spells.js";
-// import { displayHouses } from "./src/houses.js";
-
 
 document.addEventListener("DOMContentLoaded", () => {
   const searchButton = document.getElementById("search");
@@ -10,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const searchButtonSpells = document.getElementById("searchSpell");
   const searchInputSpells = document.getElementById("searchInputSpells");
 
+  //search the characters by pressing the button
   searchButton.addEventListener("click", async (event) => {
     event.preventDefault();
     const query = searchInput.value.trim();
@@ -18,6 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
       displayCharacters(characters);
     }
   });
+
+  //search the characters by pressing Enter key
   searchInput.addEventListener("keypress", async (event) => {
     if (event.key === "Enter") {
       event.preventDefault();
@@ -29,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  //search the spells by pressing the button
   searchButtonSpells.addEventListener("click", async (event) => {
     event.preventDefault();
     const query = searchInputSpells.value.trim();
@@ -37,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
       displaySpells(spells);
     }
   });
-
+  //search the spells by pressing the button
   searchInputSpells.addEventListener("keypress", async (event) => {
     if (event.key === "Enter") {
       event.preventDefault();
@@ -49,16 +51,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-
-
-
+  //load all the data fetched in the initial load of the page
   async function initialLoad() {
     const characters = await fetchCharacters();
     const spells = await fetchSpells();
-    const houses = await fetchHouses()
     displayCharacters(characters);
     displaySpells(spells);
-    // displayHouses(houses)
   }
 
   initialLoad();

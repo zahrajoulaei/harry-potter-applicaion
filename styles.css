@@ -1,20 +1,11 @@
-/* * {
-  font-family: "Playwrite AU TAS", cursive;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-} */
-
 .hp-font {
-    font-family: "Playwrite AU TAS", cursive !important;
+  font-family: "Playwrite AU TAS", cursive !important;
 }
 
-
-/* 
 .character {
   margin: 10px;
-  padding: 20px; 
-  border: 2px solid  #1F044C;
+  padding: 20px;
+  border: 2px solid #1f044c;
   cursor: pointer;
   background-color: #8f1383;
   color: white;
@@ -23,42 +14,26 @@
   align-items: center;
   justify-content: center;
   font-family: "Playwrite AU TAS", cursive;
-  border-radius: 10px; 
-  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  */
-  /* box-shadow: 0 4px 8px rgba(143, 20, 131, 0.3), 0 6px 20px rgba(143, 20, 131, 0.23); */
-/* } */ 
-
-
-.character {
-    margin: 10px;
-    padding: 20px; 
-    border: 2px solid  #1F044C;
-    cursor: pointer;
-    background-color: #8f1383;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-family: "Playwrite AU TAS", cursive;
-    border-radius: 10px; 
-    box-shadow: 0 4px 8px rgba(143, 20, 131, 0.3), 0 6px 20px rgba(143, 20, 131, 0.23);
-    transition: opacity 0.5s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Added opacity transition */
-  opacity: 0.9; /* Initial opacity */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(143, 20, 131, 0.3),
+    0 6px 20px rgba(143, 20, 131, 0.23);
+  transition: opacity 0.5s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0.8;
 }
 
 .character:hover {
-  transform: scale(1.05); /* Zoom in on hover */
-  box-shadow: 0 8px 16px rgba(143, 20, 131, 0.3), 0 12px 40px rgba(143, 20, 131, 0.23); /* Enhance shadow on hover */
-  opacity: 1; /* Full opacity on hover */
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(143, 20, 131, 0.3),
+    0 12px 40px rgba(143, 20, 131, 0.23);
+  opacity: 1;
 }
+
 .character img {
   width: 100px;
   border-radius: 50%;
   height: 100px;
-  border: 5px solid #1F044C;
+  border: 5px solid #1f044c;
 }
-
 
 .characterBoard {
   background-color: rgba(31, 2, 76, 0.8);
@@ -71,27 +46,34 @@
   justify-content: center;
   align-items: center;
 }
+
 .characterBoard img {
   max-width: 500px;
   border-radius: 50px;
 }
+
 .navbar {
   background-color: #8f1383 !important;
+  font-size: 24px;
+  font-weight: 900;
+}
 
-}
 .navbar a {
-    color:white !important;
+  color: white !important;
 }
+
 #search,
 #searchSpell,
 .btn-show {
   background-color: #8f1383;
   color: white;
 }
+
 #charactersContainer {
   display: flex;
   justify-content: center;
 }
+
 #searchInput {
   border: 2px solid #8f1383;
 }
