@@ -6,12 +6,14 @@ Welcome to the Harry Potter Application! This is a single-page web application t
 
 ### 1. Character Display
 - Displays a list of Harry Potter characters with pagination.
+- Search character names and read information about each of them
 - Shows character details on click, including full name, actor/actress name, birth date, Hogwarts house, children, and image.
 - Fetches character data from the API and dynamically creates HTML elements to display them.
 
 
 ### 2. Spells Display
 - Displays a list of Harry Potter spells in a table format.
+- Search spells names and read abot usage of them
 - Supports pagination to navigate through the spells.
 - Fetches spell data from the API and dynamically creates HTML elements to display them.
 
