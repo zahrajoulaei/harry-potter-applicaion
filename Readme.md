@@ -2,6 +2,8 @@
 
 Welcome to the Harry Potter Application! This is a single-page web application that showcases characters, spells, and houses from the Harry Potter universe using Potter API. The project leverages modern JavaScript features and integrates with external APIs to provide a rich user experience.
 
+
+
 ## Features
 
 ### 1. Character Display
@@ -43,6 +45,9 @@ Welcome to the Harry Potter Application! This is a single-page web application t
 ![screenshots](./src/images/2.png)
 
 ![screenshots](./src/images/3.png)
+
+# Demo:
+https://theharry-potter.netlify.app/
 
 ## API Endpoints
 
