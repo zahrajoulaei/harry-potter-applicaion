@@ -6,7 +6,7 @@
 } */
 
 .hp-font {
-    font-family: "Playwrite AU TAS", cursive;
+    font-family: "Playwrite AU TAS", cursive !important;
 }
 
 
@@ -49,6 +49,10 @@
 }
 .navbar {
   background-color: #8f1383 !important;
+
+}
+.navbar a {
+    color:white !important;
 }
 #search,
 #searchSpell,

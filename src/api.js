@@ -10,12 +10,12 @@ export async function fetchCharacters(query = '') {
     }
 }
 
-export async function fetchSpells() {
+export async function fetchSpells(query = '') {
     try{ 
-        const res = await fetch('https://potterapi-fedeperin.vercel.app/en/spells')
+        const url = query? `https://potterapi-fedeperin.vercel.app/en/spells?search=${query}` :'https://potterapi-fedeperin.vercel.app/en/spells'
+        const res = await fetch(url)
         const spells = await res.json()
-        console.log("spells are: ",spells)
-        return spells
+        return await  spells
     }
     catch (error){
         console.error('Error fetching seplls:', error);
