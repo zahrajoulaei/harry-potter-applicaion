@@ -24,58 +24,49 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="#charactersContainer">Charachters</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-              </li>
+                <a class="nav-link" href="#spellContainer">Spells</a>
+              </li> 
             </ul>
         
           </div>
         </div>
     </nav>
+
       <div class="container">
         <h1 class="text-center hp-font p-5">Harry Potter Characters</h1>
-
-
-          <h2 class="text-center hp-font">        <i class="fa-solid fa-wand-sparkles"></i>Search a character:</h2>
+        <div class="text-center">
+          <img src="./src/images/hp.webp" alt="Harry Potter Intro" class="img-fluid">
+        </div>
+          <h2 class="text-center hp-font p-5">        <i class="fa-solid fa-wand-sparkles"></i>Search a character:</h2>
           <input class="form-control mr-sm-2" type="search" placeholder="Search for a character..." aria-label="Search" id="searchInput">
           <button class="btn my-2 hp-font" type="submit" id="search">Search</button>
           <div id="selectedChar"></div>
-
-
-
           <div id="charactersContainer" class="row">
-          
           </div>
 
       </div>
      
-            <div id="paginationContainer" class="mt-3 pagination d-flex justify-content-center">
-             
-            </div>
+        <div id="paginationContainer" class="mt-3 pagination d-flex justify-content-center">
+          
+        </div>
+
+        <div id="housesContainer"></div>
 
       <div class="container">
-        <h1 class="text-center">Harry Potter Spells</h1>
+        <h1 class="text-center hp-font p-5">Harry Potter Spells</h1>
+        <div class="text-center p-5">
+          <img src="./src/images/snap-dobby.gif" alt="dobby" class="img-fluid">
+        </div>
         <input class="form-control mr-sm-2" type="search" placeholder="Search for  spells..." aria-label="Search-spell" id="searchInputSpells">
         <button class="btn my-2" type="submit" id="searchSpell">Search</button>
 
         <div id="spellContainer" class="row">
         </div>
+
+        <div id="paginationContainerSpell" class="p-5 pagination d-flex justify-content-center"></div>
       </div>
      
       </div>

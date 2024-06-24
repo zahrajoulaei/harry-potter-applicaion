@@ -23,3 +23,14 @@ export async function fetchSpells(query = '') {
     }
    
 }
+
+export async function fetchHouses() {
+    try {
+        const houses = await fetch('https://potterapi-fedeperin.vercel.app/en/houses');
+        return await houses.json();
+     
+    } catch (error) {
+        console.error('Error fetching houses:', error);
+        return [];
+    }
+}
