@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
       displayCharacters(characters);
       console.log("characters:", characters);
     }
-    console.log("characters:", characters);
+   
   });
   searchInput.addEventListener("keypress", async (event) => {
     if (event.key === "Enter") {
@@ -83,6 +83,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
   initialLoad();
 });
-
-//pagination
-//3 module files

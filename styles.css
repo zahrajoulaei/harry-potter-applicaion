@@ -1,46 +1,65 @@
+/* * {
+  font-family: "Playwrite AU TAS", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+} */
+
+.hp-font {
+    font-family: "Playwrite AU TAS", cursive;
+}
+
+
+
 .character {
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    cursor: pointer;
-    background-color: rgba(228, 118, 118, 0.5) !important;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  background-color: rgba(228, 118, 118, 0.5) !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Playwrite AU TAS", cursive;
 }
 .character img {
-    width: 100px;
-    border-radius: 50%;
-    height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  height: 100px;
+}
+.selectedChar {
+    /* font-family: 'Arial Narrow', Arial, sans-serif!important; */
 }
 
 .characterBoard {
-    background-color: #1F024C;
-    display: flex;
-    flex-direction: column;
-    border-radius: 18px;
-    color: white;
-    padding: 15px;
-    margin: 8px;
-    justify-content: center;
-    align-items: center;
+  background-color: rgba(31, 2, 76, 0.8);
+  display: flex;
+  flex-direction: column;
+  border-radius: 18px;
+  color: white;
+  padding: 15px;
+  margin: 8px;
+  justify-content: center;
+  align-items: center;
 }
 .characterBoard img {
-    max-width: 500px;
-    border-radius: 50px;
+  max-width: 500px;
+  border-radius: 50px;
 }
 .navbar {
-    background-color: #8F1383 !important
+  background-color: #8f1383 !important;
 }
-#search , #searchSpell{
-    background-color:  #8F1383;
-    color:white;
+#search,
+#searchSpell,
+.btn-show {
+  background-color: #8f1383;
+  color: white;
 }
-#charactersContainer{
-    display: flex;
-    justify-content: center;
+#charactersContainer {
+  display: flex;
+  justify-content: center;
 }
 #searchInput {
-   border: 2px solid  #8F1383 ;
+  border: 2px solid #8f1383;
 }
